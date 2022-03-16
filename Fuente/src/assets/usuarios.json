@@ -1,0 +1,16 @@
+[
+    {
+      "codUsuario": 1,
+      "identificacion": 1,
+      "nombres": "Luis Daniel",
+      "apellidos": "Martinez Rios",
+      "fechaNacimiento": "2018-03-03"
+    },
+    {
+      "codUsuario": 2,
+      "identificacion": 2,
+      "nombres": "Santiago Serna",
+      "apellidos": "Arango",
+      "fechaNacimiento": "2018-03-03"
+    }
+  ]

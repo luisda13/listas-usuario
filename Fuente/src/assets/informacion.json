@@ -1,0 +1,16 @@
+[
+    {
+      "idForeanea": 1,
+      "nombres": "Luis Daniel",
+      "numeroContacto": "12345",
+      "tipoNumero": "fijo",
+      "parentesco": "familiar"
+    },
+    {
+      "idForeanea": 2,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    }
+  ]
