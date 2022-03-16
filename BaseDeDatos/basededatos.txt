@@ -1,0 +1,22 @@
+CREATE DATABASE DataBase
+
+----------------------------
+
+CREATE TABLE `usuario` (
+  `identificacion` int(11) PRIMARY KEY NOT NULL,
+  `codUsuario` int(11) UNIQUE NOT NULL,
+  `nombres` varchar(30) NOT NULL,
+  `apellidos` varchar(30) NOT NULL,
+  `fechaNacimiento` Date NOT NULL,
+  `género` varchar(2) NOT NULL
+);
+
+CREATE TABLE `información` (
+  `idForanea` int(11) NOT NULL,
+  `nombres` varchar(30) NOT NULL,
+  `numeroContacto` int(11) NOT NULL,
+  `tipoNumero` varchar(2) NOT NULL,
+  `parentesco` varchar(30) NOT NULL
+);
+
+ALTER TABLE información ADD FOREIGN KEY(idForanea) REFERENCES usuario(codUsuario);
