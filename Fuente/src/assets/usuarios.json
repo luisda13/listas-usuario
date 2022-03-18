@@ -1,16 +1,78 @@
 [
     {
       "codUsuario": 1,
-      "identificacion": 1,
+      "identificacion": 11,
       "nombres": "Luis Daniel",
       "apellidos": "Martinez Rios",
-      "fechaNacimiento": "2018-03-03"
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Masculino"
     },
     {
       "codUsuario": 2,
-      "identificacion": 2,
+      "identificacion": 22,
       "nombres": "Santiago Serna",
       "apellidos": "Arango",
-      "fechaNacimiento": "2018-03-03"
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Masculino"
+    },{
+      "codUsuario": 3,
+      "identificacion": 33,
+      "nombres": "Sofia",
+      "apellidos": "Jarammillo Parra",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
+    },
+    {
+      "codUsuario": 4,
+      "identificacion": 44,
+      "nombres": "Santiago Serna",
+      "apellidos": "Arango",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
+    },{
+      "codUsuario": 5,
+      "identificacion": 55,
+      "nombres": "Fabian Obdulio",
+      "apellidos": "Baca Quitian",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Masculino"
+    },
+    {
+      "codUsuario": 6,
+      "identificacion": 66,
+      "nombres": "Nidia",
+      "apellidos": "Rios LLanos",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
+    },{
+      "codUsuario": 7,
+      "identificacion": 33,
+      "nombres": "Sofia",
+      "apellidos": "Jarammillo Parra",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Masculino"
+    },
+    {
+      "codUsuario": 8,
+      "identificacion": 44,
+      "nombres": "Santiago Serna",
+      "apellidos": "Arango",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
+    },{
+      "codUsuario": 9,
+      "identificacion": 55,
+      "nombres": "Fabian Obdulio",
+      "apellidos": "Baca Quitian",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
+    },
+    {
+      "codUsuario": 10,
+      "identificacion": 66,
+      "nombres": "Nidia",
+      "apellidos": "Rios LLanos",
+      "fechaNacimiento": "2018-03-03",
+      "genero": "Femenino"
     }
   ]

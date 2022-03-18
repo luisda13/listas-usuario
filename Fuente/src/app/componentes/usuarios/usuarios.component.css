@@ -1,0 +1,53 @@
+table {
+  width: 100%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 65% 50%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .parent{
+    margin: 5%;
+    border: 1px solid black;
+  }
+
+  .container-format{
+    margin: 10% 5% 5% 5%;
+    border-style: outset inset;
+   
+    width: 60%;
+    height: 65%;
+    position: relative;
+  }
+
+  .tabla-continer{
+    margin: 1% 1% 1% 5%;
+  }
+
+  .buscador{
+    margin: 0% 0% 0% 5%;
+  }
+
+  .container-nombre{
+    margin: 1% 0% 0% 5%;
+  }
+  
+  .container-apellido{
+    margin: 1% 0% 0% 5%;
+  }
+  
+  .container-fecha{
+    margin: 1% 0% 0% 5%;
+  }
+
+  .container-apellido{
+    margin: 1% 0% 0% 5%;
+  }

@@ -1,0 +1,128 @@
+<div class="parent">
+  <div class="mat-elevation">
+
+    <div class="buscador">
+      <mat-form-field appearance="standard">
+        <mat-label>Buscador</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="palabra clave" #input>
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+    </div>
+    <div class="tabla-continer">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+      <ng-container matColumnDef="codUsuario">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> codUsuario </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.codUsuario}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="identificacion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> identificacion </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.identificacion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombres">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> nombres </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.nombres}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellidos">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> apellidos </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.apellidos}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fechaNacimiento">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> fechaNacimiento </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.fechaNacimiento}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="genero">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> genero </th>
+        <td mat-cell *matCellDef="let usuario"> {{usuario.genero}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="aciones">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> aciones </th>
+        <td mat-cell *matCellDef="let usuario">
+
+          <button mat-icon-button aria-label="icon-button with a content_paste_search icon"
+            (click)="cargarInfo(usuario.codUsuario)">
+            <mat-icon>content_paste_search</mat-icon>
+          </button>
+
+          <button mat-icon-button aria-label="icon-button with a drive_file_rename_outline icon"
+            (click)="modificarInfo(usuario.codUsuario)">
+            <mat-icon>drive_file_rename_outline</mat-icon>
+          </button>
+
+          <button mat-icon-button aria-label="icon-button with a delete icon"
+            (click)="eliminarInfo(usuario.codUsuario)">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+
+    </table>
+  </div>
+    <div class="example-container">
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+  </div>
+  
+    <div class="container-format">
+    <div class="container-nombre">
+      <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+      <mat-form-field appearance="standard">
+        <mat-label>Ingrese sus nombres</mat-label>
+        <input matInput *ngIf="id==-1" placeholder="">
+        <input matInput *ngIf="id!=-1" value={{nombre}} placeholder="">
+      </mat-form-field>
+    </div>
+    <div class="container-apellido">
+      <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+      <mat-form-field appearance="standard">
+        <mat-label>Ingrese sus apelldios</mat-label>
+        <input matInput *ngIf="id==-1" placeholder="">
+        <input matInput *ngIf="id!=-1" value={{apellido}} placeholder="">
+      </mat-form-field>
+    </div>
+    <div class="container-fecha">
+      <mat-form-field color="accent" appearance="fill">
+        <mat-label>Ingrese fecha de nacimiento</mat-label>
+        <input matInput *ngIf="id==-1" [matDatepicker]="picker2">
+        <input matInput *ngIf="id!=-1" value={{fechaNacimiento}} placeholder="">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Selecione su genero</mat-label>
+        <mat-select *ngIf="id==-1">
+          <mat-option value="Masculino">Masculino</mat-option>
+          <mat-option value="Femenino">Femenino</mat-option>
+        </mat-select>
+
+        <mat-select [(value)]="genero" *ngIf="id!=-1">
+          <mat-option value="Masculino">Masculino</mat-option>
+          <mat-option value="Femenino">Femenino</mat-option>
+        </mat-select>
+
+        <mat-icon matSuffix>perm_identity</mat-icon>
+      </mat-form-field>
+    </div>
+    
+    <div class="example-button-row">
+      <button mat-raised-button>Actualizar</button>
+      <mat-icon matSuffix>sync</mat-icon>
+    </div>
+  </div>
+  
+</div>
+<div>
+  <app-informacion *ngIf="isInfo" [codUsuario]="codUsuario"></app-informacion>
+</div>

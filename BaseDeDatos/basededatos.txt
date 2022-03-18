@@ -14,7 +14,7 @@ CREATE TABLE `usuario` (
 CREATE TABLE `información` (
   `idForanea` int(11) NOT NULL,
   `nombres` varchar(30) NOT NULL,
-  `numeroContacto` int(11) NOT NULL,
+  `numeroContacto` varchar(20) NOT NULL,
   `tipoNumero` varchar(2) NOT NULL,
   `parentesco` varchar(30) NOT NULL
 );

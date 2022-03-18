@@ -1,5 +1,6 @@
 [
     {
+      "codUsuario": 1,
       "idForeanea": 1,
       "nombres": "Luis Daniel",
       "numeroContacto": "12345",
@@ -7,7 +8,71 @@
       "parentesco": "familiar"
     },
     {
+      "codUsuario": 2,
       "idForeanea": 2,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 3,
+      "idForeanea": 2,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "32312321",
+      "tipoNumero": "movil",
+      "parentesco": "conocido de trabajo"
+    },
+    {
+      "codUsuario": 4,
+      "idForeanea": 4,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    { "codUsuario": 5,
+      "idForeanea": 5,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 6,
+      "idForeanea": 6,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 7,
+      "idForeanea": 1,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 8,
+      "idForeanea": 2,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 9,
+      "idForeanea": 3,
+      "nombres": "Santiago Serna",
+      "numeroContacto": "54321",
+      "tipoNumero": "movil",
+      "parentesco": "amigo"
+    },
+    {
+      "codUsuario": 10,
+      "idForeanea": 4,
       "nombres": "Santiago Serna",
       "numeroContacto": "54321",
       "tipoNumero": "movil",
