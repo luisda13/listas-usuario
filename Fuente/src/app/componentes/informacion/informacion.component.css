@@ -3,9 +3,119 @@ table {
  }
 
  .parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   display: grid;
+   grid-template-columns: 65% 50%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    }
+
+
+    .example-container .mat-form-field + .mat-form-field {
+      margin-left: 8px;
+    }
+  
+    .parent{
+      margin: 5%;
+      border: 1px solid black;
+      background-color: #CAF0F8;
+    }
+  
+    .container-format{
+      margin: 10% 5% 5% 5%;
+      border-style: outset inset;
+      background-color: white;
+      width: 60%;
+      height: 435px;
+      position: relative;
+    }
+  
+    .container-titulo{
+      display: flex;
+      justify-content: center;
+      padding: 5% 100%;
+    }
+
+    .tabla-continer{
+      margin: 1% 1% 1% 5%;
+    }
+  
+    .buscador{
+      margin: 0% 0% 0% 5%;
+    }
+    .padin{
+      background-color: #CAF0F8;
+    }  
+  
+    .container-nombre{
+      margin: 1% 0% 0% 5%;
+    }
+    
+    .container-number{
+      margin: 1% 0% 0% 5%;
+    }
+    
+    .container-tipo{
+      margin: 1% 0% 0% 5%;
+    }
+  
+    .container-parec{
+      margin: 1% 0% 0% 5%;
+    }
+
+    .button{
+      cursor: pointer;
+      transition:  background-position 0.5s;
+      color: #00B4D8;
+    }
+  
+    .button:hover{
+      
+      background-position: right;
+      color: #03045E;
+      font-weight: 700;
+      border-color: #03045E;
+    }
+
+    .conteiner-button-crud{
+      display: flex;
+      justify-content: center;
+    } 
+  
+    .button-crud{
+      padding: 1% 5%;
+      cursor: pointer;
+      border-color: none;
+      width: 80%;
+    }
+  
+    .button-crud:hover{
+      background-position: right;
+      color: #03045E;
+      font-weight: 700;
+      border-color: #03045E;
+    }
+  
+    .icon-button{
+      margin-left: 1%;
+    }
+
+    .indice{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+  
+    .prefac{    
+      display: flex;
+      justify-content: right;
+      position: static;
+      height:30px;
+      padding: 5%;
+    }
+  
+    .titulo{
+      display: flex;
     }

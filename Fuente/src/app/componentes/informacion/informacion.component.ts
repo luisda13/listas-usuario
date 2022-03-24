@@ -79,7 +79,7 @@ export class InformacionComponent implements OnInit {
 
     for(let i=0;i<this.listaInformacion.length;i++){
 
-      if(this.listaInformacion[i].idForeanea==id){
+      if(this.listaInformacion[i].codUsuario==id){
         this.nombre=this.listaInformacion[i].nombres;
         this.numeroContacto=this.listaInformacion[i].numeroContacto;
         this.tipoNumero=this.listaInformacion[i].tipoNumero;
@@ -89,7 +89,13 @@ export class InformacionComponent implements OnInit {
     }
     this.id=id;
   }
-
+  prefac(){
+    
+    this.id=-1;
+    this.ngOnInit()
+  
+  
+}
 }
 export class Usuario {
   constructor(

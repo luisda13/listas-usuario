@@ -3,12 +3,9 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import usuarios from '../../../assets/usuarios.json';
-import {FormControl, Validators} from '@angular/forms';
-import { Subject } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { InformacionComponent } from '../informacion/informacion.component';
-
-
+import { BasedatosService } from 'src/app/servis/basedatos.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-usuarios',
@@ -21,6 +18,7 @@ export class UsuariosComponent implements OnInit {
   id:number=-1;
   isInfo:boolean=false;
   puerta:boolean=false;
+  visible:boolean=false;
   listaUsuarios:Array<any> = usuarios;
   columnas: string[] = ['codUsuario', 'identificacion', 'nombres', 'apellidos', 'fechaNacimiento', 'genero', 'aciones'];
   codUsuario:number=-1; 
@@ -30,19 +28,27 @@ export class UsuariosComponent implements OnInit {
   fechaNacimiento:Date; 
   genero:string; 
   dataSource:any;
+  
 
   @ViewChild(InformacionComponent) hijo: InformacionComponent;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(){
-    
+
+  
+  constructor(private dataS: BasedatosService){
+    this.dataS.getAllUsuarios().subscribe(data =>this.listaUsuarios=data);
+    //this.listaUsuarios=this.dataS.getAllUsuarios();
   }
 
-  ngOnInit() {
 
+  ngOnInit() {
+   
     setTimeout(() => {
+
+      
+      //console.log(this.dataS.getAllUsuarios())
       this.dataSource = new MatTableDataSource(this.listaUsuarios);  
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;     
@@ -70,11 +76,12 @@ export class UsuariosComponent implements OnInit {
 
   
 
-  eliminarInfo(id:number){
-    console.log(id+' eliminar info');
+  eliminarInfo(id:string){
+   // this.dataS.deleteUsuario(id).subscribe(data =>console.log("se borro y me llego esto "+data))
+   this.dataS.deleteUsuario(id).subscribe(data =>console.log("se borro y me llego esto "+data))
   }
 
-  modificarInfo(id:number){
+  cargarInfoModificar(id:number){
 
     for(let i=0;i<this.listaUsuarios.length;i++){
       if(this.listaUsuarios[i].codUsuario==id){
@@ -87,4 +94,18 @@ export class UsuariosComponent implements OnInit {
     }   
     this.id=id; 
   }
+
+  modificarUsuario(){
+
+  }
+
+crearUsuario(){
+
+}
+
+  prefac(){  
+      this.id=-1;
+      this.ngOnInit()
+  }
+ 
 }
