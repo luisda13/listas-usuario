@@ -57,11 +57,11 @@ table {
   }
 
   .container-nombre{
-    margin: 1% 0% 0% 5%;
+    margin: 1% 0% 0% 10%;
   }
   
   .container-apellido{
-    margin: 1% 0% 0% 5%;
+    margin: 1% 0% 0% 1%;
   }
   .cols {
     display: grid;
@@ -82,7 +82,7 @@ table {
     margin: 1% 0% 0% 5%;
   }
 
-  .container-apellido{
+  .container-idetificador{
     margin: 1% 0% 0% 5%;
   }
 
@@ -143,6 +143,10 @@ table {
 
   .titulo{
     display: flex;
+  }
+
+  .wrapper{
+    display:none;
   }
  
 

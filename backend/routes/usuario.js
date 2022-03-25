@@ -14,8 +14,9 @@ service.list({codUsuario: req.params.codUsuario})
 .catch((error)=>res.send(error));
 
 const create =(req,res) =>{
-    const usuario =({identificacion,codUsuario,nombres,apellidos,fechaNacimiento,género} =req.body);
-    return service.create(usuario)
+    //const usuario =({codUsuario,identificacion,nombres,apellidos,fechaNacimiento,género} =body);
+    
+    return service.create(req.body)
     .then((response)=>res.json(response))
     .catch((error)=>res.send(error));
 }

@@ -24,9 +24,16 @@ private urlAPI ='http://localhost:3000';
   }
 
  createUsuario(usuario: Usuario){
-  const url = this.urlAPI+'/';
+   console.log("si llego el crear mira "+usuario)
+  const url = this.urlAPI+'/usuario/';
   return this.http.post(url,usuario);
  } 
+
+ updateUsuario(usuario: Usuario,codUsuario:number){
+  console.log("si llego el modificar mira "+usuario)
+  const url = this.urlAPI+'/usuario/update/'+codUsuario;
+  return this.http.put(url,usuario);
+ }
 
  deleteUsuario(codUsuario:string){
   const url = this.urlAPI+'/usuario/delete/'+codUsuario;

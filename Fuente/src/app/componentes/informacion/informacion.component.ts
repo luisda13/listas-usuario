@@ -14,10 +14,10 @@ export class InformacionComponent implements OnInit {
   @Input() codUsuario:number;
   
   
-  listaInformacion:Array<Usuario> = info;
-  listaRelacionados:Array<Usuario>=new Array<Usuario>();
+  listaInformacion:Array<Informacion> = info;
+  listaRelacionados:Array<Informacion>=new Array<Informacion>();
   id:number=-1;
-  columnas: string[] = ['codUsuario','idForeanea', 'nombres', 'numeroContacto', 'tipoNumero', 'parentesco', 'aciones'];
+  columnas: string[] = ['idForeanea', 'nombres', 'numeroContacto', 'tipoNumero', 'parentesco', 'aciones'];
   idForeanea:number;  
   nombre:String; 
   numeroContacto:String; 
@@ -58,12 +58,12 @@ export class InformacionComponent implements OnInit {
 
   cargardatos(){
     this.ngOnInit()
-    this.listaRelacionados=new Array<Usuario>();
+    this.listaRelacionados=new Array<Informacion>();
     for(let i=0;i<this.listaInformacion.length;i++){
       if(this.listaInformacion[i].idForeanea==this.codUsuario){
        // console.log('entro '+this.listaInformacion[i].nombres);
        
-        let pelicula =new Usuario(this.listaInformacion[i].codUsuario,
+        let pelicula =new Informacion(this.listaInformacion[i].codUsuario,
         this.listaInformacion[i].idForeanea, this.listaInformacion[i].nombres, this.listaInformacion[i].numeroContacto,
         this.listaInformacion[i].tipoNumero,this.listaInformacion[i].parentesco);  
         this.listaRelacionados.push (pelicula);
@@ -97,7 +97,7 @@ export class InformacionComponent implements OnInit {
   
 }
 }
-export class Usuario {
+export class Informacion {
   constructor(
     public codUsuario:number,
     public idForeanea:number,

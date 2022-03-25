@@ -5,7 +5,7 @@
       "nombres": "Luis Daniel",
       "apellidos": "Martinez Rios",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Masculino"
+      "genero": 0
     },
     {
       "codUsuario": 2,
@@ -13,14 +13,14 @@
       "nombres": "Santiago Serna",
       "apellidos": "Arango",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Masculino"
+      "genero": 0
     },{
       "codUsuario": 3,
       "identificacion": 33,
       "nombres": "Sofia",
       "apellidos": "Jarammillo Parra",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     },
     {
       "codUsuario": 4,
@@ -28,14 +28,14 @@
       "nombres": "Santiago Serna",
       "apellidos": "Arango",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     },{
       "codUsuario": 5,
       "identificacion": 55,
       "nombres": "Fabian Obdulio",
       "apellidos": "Baca Quitian",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Masculino"
+      "genero": 0
     },
     {
       "codUsuario": 6,
@@ -43,14 +43,14 @@
       "nombres": "Nidia",
       "apellidos": "Rios LLanos",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     },{
       "codUsuario": 7,
       "identificacion": 33,
       "nombres": "Sofia",
       "apellidos": "Jarammillo Parra",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Masculino"
+      "genero": 0
     },
     {
       "codUsuario": 8,
@@ -58,14 +58,14 @@
       "nombres": "Santiago Serna",
       "apellidos": "Arango",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     },{
       "codUsuario": 9,
       "identificacion": 55,
       "nombres": "Fabian Obdulio",
       "apellidos": "Baca Quitian",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     },
     {
       "codUsuario": 10,
@@ -73,6 +73,6 @@
       "nombres": "Nidia",
       "apellidos": "Rios LLanos",
       "fechaNacimiento": "2018-03-03",
-      "genero": "Femenino"
+      "genero": 1
     }
   ]
